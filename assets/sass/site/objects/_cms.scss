@@ -1,0 +1,61 @@
+/*------------------------------------*\
+	$CMS
+\*------------------------------------*/
+
+/**
+ * Generic image styling
+ */
+img.alignleft,
+img.alignright {
+	border: 1px solid $gray;
+	@include rem((
+		margin-bottom: $base-spacing-unit 
+	));
+}
+
+/**
+ * WP caption images
+ */
+.wp-caption {
+	@include rem((
+		margin-bottom: $base-spacing-unit
+	));
+
+	text-align: center;
+}
+
+.wp-caption img {
+	display: inline;
+}
+
+.wp-caption-text {
+	margin: 0;
+	@include rem((
+		padding: $half-spacing-unit 0
+	));
+	
+	@include font-size( 14 );
+}
+
+/**
+ * WP images
+ */
+.alignleft {
+	
+	@include mq( $to: small ) {
+		float: left;
+		@include rem((
+			margin-right: $base-spacing-unit
+		));
+	}
+	
+}	
+
+.alignright {
+	@include mq( $to: small ) {
+		float: right;
+		@include rem((
+			margin-left: $base-spacing-unit
+		));
+	}	
+}

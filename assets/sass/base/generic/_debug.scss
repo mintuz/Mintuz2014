@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    $DEBUG
+\*------------------------------------*/
+
+@if $debug-mode == true {
+
+/**
+ * Susy grid overlay
+ */
+.wrap {
+	@include susy-grid-background;
+}
+
+
+/**
+ * Responsive debug bar to display what breakpoint is currently
+ * active. You just need to stick the following markup in your page:
+ *
+ * <div class="responsive-debug"></div>
+ *
+ */
+.responsive-debug { 
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+	
+	width: 100%;
+	
+	@include rem((
+		height: 40px
+	));
+
+	background: rgb(93,95,97);
+	opacity: 0.2;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	
+	.admin-bar & {
+		
+		@include rem((
+			top: 48px
+		));
+
+	}
+	
+	&:hover {
+		opacity: 1;
+	}
+	
+	&:after {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		
+		display: block;
+		width: 100%;
+		
+		@include rem((
+			height: 40px
+		));
+
+		content: 'Hmm...';
+		text-align: center;
+		
+		@include rem((
+			line-height: 40px
+		));
+
+		color: rgb(207,211,0);
+		
+		/**
+		 * Loop through all the breakpoints and create the required media query
+		 */
+		@each $breakpoint-name, $breakpoint-width in $mq-breakpoints {
+      @include mq( $from: $breakpoint-name ) {
+				content: 'BP - ' + $breakpoint-name + ' (' + pem( $breakpoint-width ) + '/' + $breakpoint-width + ')';
+			}
+    }
+	}
+}
+
+}

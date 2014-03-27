@@ -1,0 +1,138 @@
+@if $use-social-share == true {
+
+/*------------------------------------*\
+	$SOCIAL SHARING
+\*------------------------------------*/
+
+
+/**
+ * Adding the following markup will create consistantly styled social sharing buttons 
+ *
+ *  <div class="twitter-social" data-url="{{post_link}}" data-text="{{post_title}}" data-title="<i class"i i-twitter"></i> Tweet"></div>
+ *  <div class="facebook-social" data-url="{{post_link}}" data-text="{{post_title}} data-title="<i class="i i-facebook"></i> Like"></div>
+ *
+ * Works with or without the icon, but looks nicer with them.
+ *
+ */
+
+
+/* The containing element created by the JS plugin */
+.sharrre {
+	display: inline-block;
+	@include rem((
+		margin-right: $base-spacing-unit
+	));
+	
+	/* Count Element */
+	.count {
+		position: relative;
+		
+		display: block;
+		@include rem(( 
+			height: 40px,
+			margin-bottom: $half-spacing-unit
+		));
+		border: 1px solid rgb(178, 198, 204);
+		
+		@include font-size( 18, 40px );
+		font-weight: bold;
+		text-align: center;
+		color: rgb(82, 91, 103);
+		
+		background: rgb(251, 251, 251); /* Old browsers */
+		border-radius: 4px;
+		
+		.lt-ie9 & {
+			width: 87px;
+		}
+	
+		&:before,
+		&:after {
+			position: absolute;
+			left: 49%;
+			
+			display: block;
+			width: 0;
+			height: 0;
+			
+			content: '';
+		}
+	
+		&:before {
+			bottom: -14px;
+			
+			border: 7px solid transparent;
+			border-top-color: rgb(178, 198, 204);
+			@include rem((
+				margin-left: -7px
+			));
+		}
+	
+		&:after {
+			bottom: -12px;
+			
+			border: 6px solid transparent;
+			border-top-color: rgb(251, 251, 251);
+			@include rem((
+				margin-left: -6px
+			));	
+		}
+	}
+	
+	
+	/* Button Element */
+	.share {
+		display: block;
+		@include rem((
+			width: 60px,
+			padding: $half-spacing-unit,
+			margin-top: $half-spacing-unit
+		));
+	
+		@include font-size( 12, 17px );
+		font-weight: bold;
+		text-align: center;
+	
+		&,
+		&:hover {
+			color: rgb(255,255,255);
+		}
+		
+		/* Icons Styles */
+		.i {
+			width: 17px;
+			height: 17px;
+			margin-top: -3px;
+			
+			@include font-size( 16 );
+		}
+	
+		/* Twitter Styles */
+		.twitter-social & {
+			background: rgb(69,169,217);
+	
+			&:hover {
+				background: darken( rgb(69,169,217), 10% );
+			}
+	
+			.i {
+				@include rem((
+					margin-right: 5px
+				));
+			}
+	
+		}
+	
+		.facebook-social & {
+			width: 59px; /* Fix the width of the Facebook button so they're all consistant */
+			
+			background: rgb(39,91,153);
+	
+			&:hover {
+				background: darken( rgb(39,91,153), 10% );
+			}
+		}
+	}
+}
+
+}

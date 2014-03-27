@@ -1,0 +1,72 @@
+.mast {
+	position: relative;
+	background-color: $bc-blue;
+	min-height: 300px;
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+.mast__title {
+	color: $white;
+	padding-top: 60px;
+}
+
+.me {
+	z-index: 999;
+	position: absolute;
+	bottom: -60px;
+	left: 	0;
+	right: 	0;
+}
+
+.profile__image {
+	width: 		150px;
+	height: 	150px;
+	border-radius: 1000px;
+	border: $half-spacing-unit solid darken($bc-blue,10%);
+}
+
+.profile {
+	display: inline-block;
+}
+
+.profile__social-link {
+	
+	@include font-size(32);
+	color: $white;
+	position: absolute;
+	top: 		50%;
+	left: 	50%;
+	margin: -15px;
+
+}
+
+.github {
+	
+	-webkit-transform: rotate(-130deg) translate(130px);
+
+	.i {
+		-webkit-transform: rotate(130deg);
+	}
+
+}
+
+.twitter {
+	
+	-webkit-transform: rotate(-90deg) translate(130px);
+
+	.i {
+		-webkit-transform: rotate(90deg);
+	}
+
+}
+
+.steam {
+	
+	-webkit-transform: rotate(-50deg) translate(130px);
+	
+	.i {
+		-webkit-transform: rotate(50deg);
+	}
+
+}

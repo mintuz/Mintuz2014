@@ -1,0 +1,95 @@
+#! /bin/bash
+
+# funcs
+program_installed() {
+  [ -x "$(which $1)" ]
+}
+
+if ! program_installed ruby
+then
+  
+  # install libs
+
+  echo 'Installing some Ruby'
+
+  if program_installed apt-get ; then sudo apt-get install ruby
+  elif program_installed yum ; then sudo yum install ruby
+  elif program_installed brew ; then sudo brew install ruby
+  else
+    echo 'No package manager available, please install the following manually: ruby'
+    exit 2
+  fi
+
+fi
+
+if ! program_installed gem
+then
+
+  # Install Rubygem
+  
+  echo 'Installing Rubygem'
+  git checkout https://github.com/rubygems/rubygems.git
+  cd rubygems
+  sudo ruby setup.rb && cd .. && rm -rf rubygems
+
+fi
+
+if ! program_installed fontforge
+then
+
+  # Install FontForge
+  echo 'Installing FontForge'
+	brew install fontforge ttfautohint
+
+fi
+
+if ! program_installed npm
+then
+  
+  # install nodejs
+
+  echo 'Installing NodeJS'
+
+  git clone https://github.com/joyent/node.git
+  cd node
+  git checkout v0.8.2
+  export CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+  export CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  ./configure && make && sudo make install && cd .. && rm -rf node
+
+fi
+
+#if ! program_installed grunt
+#then
+# install grunt
+#  echo 'Installing Grunt'
+#  sudo npm install -g grunt-cli
+#fi
+
+if ! program_installed bundle
+then
+  
+  # install bundler
+  echo 'Installing Bundler'
+  sudo gem install bundler
+
+fi
+
+if ! program_installed bower
+then
+
+  # Install Bower
+  echo 'Installing Bower'
+  sudo npm install -g bower
+
+fi
+
+# install gems
+
+echo 'Bundle Install'
+sudo bundle install
+
+# install grunt dependencies
+
+echo 'Initiating NodeJS'
+sudo npm install --unsafe-perm

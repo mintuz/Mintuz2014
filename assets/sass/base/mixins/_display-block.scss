@@ -1,0 +1,21 @@
+
+/*
+ * Mixin for keeping everything together
+ * In the older browsers
+ * 
+ */
+
+@mixin display-block {
+	
+	@if $old-ie == true {
+		
+		.lt-ie8 & {
+			
+			zoom: 1 !important;
+			display: inline !important;
+
+		}
+
+	}
+
+}

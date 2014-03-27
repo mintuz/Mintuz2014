@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    $PERCENTAGE WIDTH
+\*------------------------------------*/
+
+/**
+ * Converts a pixel based width into a relative
+ * percentage based version.
+ *
+ * If $debug-mode: true; this will also display the
+ * orginal px value
+ * 
+   `@include vendor(box-sizing, border-box);`
+ * 
+ */
+
+@mixin percent-width( $target, $container ) {
+
+	@if $debug-mode == true {
+
+		width: $target +px;
+		
+	}
+
+	width: cp( $target, $container );
+
+}

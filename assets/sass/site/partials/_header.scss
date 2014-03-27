@@ -1,0 +1,35 @@
+.site-header {
+
+	background-color: $bc-dark-grey;
+	
+	&,
+	a {
+		color: $white;
+	}
+
+}
+
+.primary-navigation {
+	font-size: 0;
+}
+
+.primary-navigation a {
+
+	@include font-size(16);
+	@include transition(0.5s $default-easing background-color);
+	padding-top: 			$half-spacing-unit;
+	padding-bottom: 	$half-spacing-unit;
+	padding-left: $base-spacing-unit;
+	padding-right: $base-spacing-unit;
+	border-right: 1px solid darken( $bc-dark-grey,10% );
+	text-align: center;
+	
+	&:hover {
+		background-color: $bc-blue;
+	}
+
+}
+
+.primary-navigation li:first-child a {
+	border-left: 1px solid darken( $bc-dark-grey,10% );
+}

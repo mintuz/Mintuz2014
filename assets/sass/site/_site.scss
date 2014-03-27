@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    $SITE
+\*------------------------------------*/
+
+/**
+ * NOTES...............Some interesting scripture
+ * IMPORTS.............Begin importing the genius
+ * 
+ * FONTS...............Include any custom fonts
+ * TYPE................Setup the base typography
+ * 
+ * SPRITE..............Custom sprite stlying
+ * BUTTON..............Custom button styling
+ * FORMS...............Theme specific form styling
+ * MISC................The home of small abstractions
+ */
+
+/*------------------------------------*\
+    $NOTES
+\*------------------------------------*/
+
+/*
+ * site.css, is the place for all the theme specific setup and OO items
+ *
+ * The variables set in `global_vars.css` are used throughout
+ * site.css to style everything we need.
+ *
+ * If you create any custom OO abstractions they should be included here,
+ * same with any modifications or extentions to OO abstractions already
+ * created in core.css such as buttons etc
+ */
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+/**
+ * Base styles
+ */
+@import "type/fonts";
+@import "type/type";
+@import "type/icons";
+
+/**
+ * UI Partials
+ */
+@import "partials/**/*";
+
+/**
+ * Objects and abstractions
+ */
+@import "objects/**/*";

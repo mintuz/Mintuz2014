@@ -1,0 +1,49 @@
+@if $use-flexy == true {
+
+	/*------------------------------------*\
+		    $FLEXY
+	\*------------------------------------*/
+
+
+	/**
+	 * Flex makes containers scale not just by width but also height, keeping porporations.
+	 * There are some default square sizes using the grid system but can be overridden.
+	 * 
+	 * How It works, Padding is related to the width of the element so if you had a div
+	 * with a width of 23% and padding-bottom with the same value, it would create a
+	 * div 23% * 23%. The magic happens by setting the height to 0 and having a inner container
+	 * with position absolute and setting the top,left,right, bottom to 0.
+	 *
+	 *
+	 *
+	 * 
+	   
+	   <div class="flexy">
+	       <div class="flexy__content">
+				   <p>Its a square</p>
+	       </div>
+	   </div>
+
+	 * 
+	 */
+
+	.flexy {
+
+		height: 0;
+		position: relative;
+		display: block;
+
+	}
+
+	.flexy__content {
+
+		display: block;
+		position: absolute;
+		top: 		0;
+		left: 	0;
+		right: 	0;
+		bottom: 0;
+
+	}
+
+}

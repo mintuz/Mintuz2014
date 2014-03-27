@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+html {
+    font: (strip-unit( $base-font-size ) / 16 +em)/(strip-unit( $base-line-height ) / strip-unit( $base-font-size) ) $base-face;
+    color: $text-color;
+    overflow-y: scroll;
+}
+
+body {
+	background-color: $body-color;
+}

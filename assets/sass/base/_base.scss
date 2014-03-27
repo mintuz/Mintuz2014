@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    $CORE
+\*------------------------------------*/
+
+/**
+ * NOTES...............Some interesting scripture
+ * IMPORTS.............Begin importing the genius
+ * 
+ * FUNCTIONS...........Some basic calculation stuff
+ * MIXINS..............Super-simple Sass stuff
+ * NORMALISE...........Full normalise.css approach
+ * NORMALISE LEGACT....Full normalise.css approach with IE6/IE7 support
+ * RESET...............Sort the stuff is normalise we don't agree with
+ * CLEARFIX............The clearfix
+ * 
+ * MAIN................High-level elements like `html` or `body`, etc
+ * TABLES..............Table standardisation and some handy helper stuff
+ * FORMS...............Bootstrap form styles and position elements
+ * 
+ * NAV.................A simple abstraction to put a list in horizontal nav mode
+ * PAGINATION..........Very stripped back, basic paginator
+ * BOX.................Standard box object - based on the Media object by Nicole Sullivan
+ * MATRIX..............Gridded lists
+ * SPLIT...............A simple split-in-two object
+ * SPRITE..............Generic spriting & icon elements
+ * BUTTONS.............Pre custom styling button setup
+ *
+ * WIDTHS..............Width classes for use alongside the grid system etc.
+ * MISC................A series of helper classes to use arbitrarily
+ * DEBUG...............Enable to add visual flags for debugging purposes
+ */
+
+/*------------------------------------*\
+    $NOTES
+\*------------------------------------*/
+
+/*
+ * core.css, is the base of this OO framework
+ *
+ * The variables set in `global_vars.css` are used throughout
+ * core.css to style everything we need at core level. Any custom styles SHOULD
+ * NOT be added or modified in core.css directly, but added via either the site.css
+ * section or within the main theme stylesheet as per the open/closed principle:
+ * 
+ * csswizardry.com/2012/06/the-open-closed-principle-applied-to-css
+ * 
+ * Try not to edit any CSS beyond this point; if you find you need to do so
+ * we need to consider modifying core.css for future use.
+ */
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+/**
+ * Functions
+ */
+@import "functions/*";
+
+
+/**
+ * Mixins
+ */
+@import "mixins/rem";
+@import "mixins/mq";
+@import "mixins/font-size";
+@import "mixins/font";
+@import "mixins/border-box";
+@import "mixins/form-validation";
+@import "mixins/hover";
+@import "mixins/old-ie";
+@import "mixins/percent-width";
+@import "mixins/placeholder";
+@import "mixins/zero-last";
+
+
+/**
+ * Reset
+ */
+//@import "reset/normalize";
+@import "reset/normalize-legacy";
+@import "reset/reset";
+ 
+
+/**
+ * Clearfix
+ */
+@import "generic/clearfix";
+ 
+ 
+/**
+ * Base styles
+ */
+@import "generic/main";
+@import "generic/tables";
+@import "generic/forms";
+
+
+/**
+ * Objects and abstractions
+ */
+@import "objects/*";
+
+
+/**
+ * Misc: helper classes
+ */
+@import "generic/misc";
+@import "generic/debug";

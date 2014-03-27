@@ -1,0 +1,181 @@
+@if $use-login-form == true {
+
+/*------------------------------------*\
+	$LOGIN
+\*------------------------------------*/
+
+/**
+ * Gives you all the styles for a nice little login form
+ * You'll need the following markup
+ * e.g.:
+ *
+   <form class="login-form login-form--review" action="" method="post">
+   	   <div class="login-form__header">
+	       <a href="http://www.forepoint.co.uk" class="login-form__brand"><img src="assets/img/forepoint-logo.svg" alt="Forepoint Ltd" /></a>
+	   </div>
+   	   <div class="login-form__body">
+   	   	   <h1 class="login-form__title">Client Review Portal</h1>
+   	   	   <input type="text" class="login-form__input login-form__input--username" id="username" placeholder="Username" />
+   	   	   <input type="text" class="login-form__input login-form__input--password" id="password" placeholder="Password" />
+   	   	   <button type="submit" class="login-form__btn login-form__btn--submit">Login</button>		
+   	   </div>
+   </form>
+ *
+ */
+ 
+/**
+ * Defaults
+ */
+ 
+$login-border-color: rgb(198,198,198);
+$login-background-color: rgb(250,250,250);
+$login-placeholder-gray: rgb(212,212,212);
+$login-border-radius: 4px;
+
+$login-base-spacing-unit: 22px;
+$login-half-spacing-unit: $login-base-spacing-unit / 2 !default;
+$login-double-spacing-unit: $login-base-spacing-unit * 2 !default;
+
+
+/**
+ * Login styles
+ */
+.login-form {
+	@include rem((
+		margin-top: 250px
+	));
+	border: 1px solid $login-border-color;
+
+	box-shadow: 1px 1px 4px rgba(0,0,0,.1);
+	border-radius: $login-border-radius;
+	background-color: $login-background-color;
+	
+	.supports-csstransitions & {
+		opacity: 0;
+		@include translateY( -100px );
+		@include transition( transform 1s cubic-bezier(0.25, 0.1, 0.25, 1), opacity .75s cubic-bezier(0.25, 0.1, 0.25, 1) );
+	}
+	
+	.supports-csstransitions .js-ready & {	
+		opacity: 1;
+		@include translateY( 0px );	
+	}
+}
+
+.login-form__header {
+	position: relative;
+	
+	display: block;
+	@include rem((
+		height: 45px
+	));
+	border-bottom: 1px solid $login-border-color;
+	
+	border-radius: 4px 4px 0 0;
+	background: rgb(239,239,239);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(239,239,239,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%);
+	background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%);
+	background:     -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%);
+	background:      -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%);
+	background:         linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%);
+	
+	
+}
+
+.login-form__brand { 
+	display: block;
+	@include rem((
+		padding: 13px 0
+	));
+	margin: 0 auto;
+}
+
+.login-form__body {
+	@include rem((
+		padding: $base-spacing-unit
+	));
+}
+
+.login-form__title {
+	text-align: center;
+	font-weight: bold;
+	
+	@include font-size( 16, false );
+}
+
+
+/**
+ * Login form fields
+ */
+.login-form__input {
+	width: 100%;
+	@include rem((
+		padding: $login-half-spacing-unit,
+		margin-bottom: $login-half-spacing-unit
+	));
+	border: 1px solid $login-border-color;
+	
+	box-shadow: inset 0 0 4px rgba(0,0,0,.10);
+	border-radius: $login-border-radius;
+	background-repeat: no-repeat;
+	background-position: right #{ $login-half-spacing-unit } center;
+	
+	@include border-box;
+	@include placeholder( $login-placeholder-gray );
+	@include transition( border-color ease-in-out .15s, box-shadow ease-in-out .15s );
+	
+	&:focus {
+    border-color: rgba(246,116,62,.8);
+		outline: 0;
+		box-shadow: inset 0 0 4px rgba(0,0,0,.10), 0 0 8px rgba(246,116,62,.6);
+	}
+
+}
+
+.login-form__input--username {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2RkVFMkVFNUZDNTAxMUUyODBCQUFEQjk3NTJCRTdBOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2RkVFMkVFNkZDNTAxMUUyODBCQUFEQjk3NTJCRTdBOCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjZGRUUyRUUzRkM1MDExRTI4MEJBQURCOTc1MkJFN0E4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjZGRUUyRUU0RkM1MDExRTI4MEJBQURCOTc1MkJFN0E4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SXo2RgAAAT1JREFUeNrsVNttwzAMlIIO4A2SBQx4g7oTJBukGzQbtJkg9QbyBtkg8QYCPEA8QjZojwBVCISpx38JELRI6XSkKVqTkXmeO5gbtIE+oW9t2/rUmY3Jy4UBDdtL7kAJ6M5UygvS+4G9QieySG0Reyh2itZ+pUR08QH6StbC8RBslnAJLrjyoVOoKXzf7PsDkectb+hhjtD3lWxCFsSwi4CkOOiIS+9WpNEw8EdhLSmrgQAB9gxOm2glYv8J7VfCd+iZWFX9fT4wKeFJAyxtqWr5B03KttJfBBo3+Vnxl4Nyn4bp5NFCX9G7bzhezXQffQ/CyngxaGBCQ8Txg3A8qI3y0nRQHmXdCrt43fG+Yqa9mD5GWfc1oKFeTg5tXrtUXXNMRyU+VjGNWslrk4j9XmutTSL1IfMwBq0EvwIMAJ2+aMR0mgT4AAAAAElFTkSuQmCC);
+}
+
+.login-form__input--password {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAYAAAD3Va0xAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2RkVFMkVFOUZDNTAxMUUyODBCQUFEQjk3NTJCRTdBOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2RkVFMkVFQUZDNTAxMUUyODBCQUFEQjk3NTJCRTdBOCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjZGRUUyRUU3RkM1MDExRTI4MEJBQURCOTc1MkJFN0E4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjZGRUUyRUU4RkM1MDExRTI4MEJBQURCOTc1MkJFN0E4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+B9bUXgAAAN9JREFUeNpiZMACLl++rACk6oE4AIgFoMIfgHgDEDfq6uo+QNfDiMUQAyC1H8kAdAAy0BFo2AWcBkFdch6PIciGGSK7jAlNQT2aISCvOELxBiRxAahaOGBBMygA2RCgjYFI/ANAF69HUgOiEzFcBFQkgOaaiVi8NBHNVQy4vAYHQNccwCJ8AZd6JiSNHwgEMF41TAxUAlQziBEYyKDQN0CKfhhoxKEHm5oLIIP+DyqvjXCDLuBL0cQadAGYmkHFhSEhw6iaIP8T4TUGpESLFbAQYZnB0I3+C1Qw5wJAgAEAgUM5+QBNuVIAAAAASUVORK5CYII=);
+}
+
+.login-form__btn {
+	display: block;
+	
+	width: 100%;
+	border: 1px solid rgb(121,121,121);
+	@include rem((
+		padding: $login-half-spacing-unit 0,
+		margin-bottom: $login-half-spacing-unit
+	));
+	
+	text-align: center;
+	color: $white;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	font-weight: bold;
+	border-radius: $login-border-radius;
+	
+	background: rgb(250,164,66);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,164,66,1)), color-stop(100%,rgba(246,115,62,1)));
+	background: -webkit-linear-gradient(top, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+	background:    -moz-linear-gradient(top, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+	background:     -ms-linear-gradient(top, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+	background:      -o-linear-gradient(top, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+	background:         linear-gradient(to bottom, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+		
+	@include border-box;
+	
+	&:hover {
+		background: rgb(250,164,66);
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(250,164,66,1)), color-stop(100%,rgba(246,115,62,1)));
+		background: -webkit-linear-gradient(bottom, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+		background:    -moz-linear-gradient(bottom, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+		background:     -ms-linear-gradient(bottom, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+		background:      -o-linear-gradient(bottom, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+		background:         linear-gradient(to top, rgba(250,164,66,1) 0%, rgba(246,115,62,1) 100%);
+	}
+}
+
+}

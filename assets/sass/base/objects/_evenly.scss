@@ -1,0 +1,45 @@
+/* 
+	<div class="evenly">
+     
+     <div class="evenly__box">
+		   <p>Its a an even column</p>
+     </div>
+     
+     <div class="evenly__box">
+		   <p>Its a an even column</p>
+     </div>
+
+     <div class="evenly__box">
+		   <p>Its a an even column</p>
+     </div>
+
+     <div class="evenly__box">
+		   <p>Its a an even column</p>
+     </div>
+
+ 	</div>
+*/
+
+
+.evenly,
+%evenly {
+	
+	text-align: justify;
+	font-size: 1.5px; /* IE 9 & 10 don't like font-size: 0; */
+
+	&:after {
+	  
+	  content: '';
+	  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+	  @include inline-block();
+
+	}
+
+}
+
+// Whatever has evenly__box needs to have a specified width, can be px or %
+
+.evenly__box,
+%evenly__box {
+	@include inline-block();
+}
