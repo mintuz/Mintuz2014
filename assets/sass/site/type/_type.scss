@@ -2,6 +2,16 @@
     $TYPE
 \*------------------------------------*/
 
+@mixin bf-body {
+	font-family: 'Lora', serif;
+	font-weight: normal;
+}
+
+@mixin bf-head {
+	font-family: 'Ubuntu', sans-serif;
+  font-weight: 900;
+}
+
 /**
  * Paragraphs
  */
@@ -26,10 +36,14 @@ ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
+
+	@include bf-head();
 	margin-top: 0;
+
 	@include rem((
 		margin-bottom: $base-spacing-unit
 	));
+
 }
 
 @each $heading, $styles in $heading-styles {

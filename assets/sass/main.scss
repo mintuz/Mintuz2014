@@ -26,3 +26,7 @@
 \*------------------------------------*/
 
 // Let the wizardry commence
+
+body {
+	@include bf-body();
+}

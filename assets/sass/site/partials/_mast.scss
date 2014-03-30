@@ -4,11 +4,18 @@
 	min-height: 300px;
 	text-align: center;
 	margin-bottom: 100px;
+	padding-left: 	$base-spacing-unit;
+	padding-right: 	$base-spacing-unit;
 }
 
 .mast__title {
 	color: $white;
 	padding-top: 60px;
+		
+	@include mq( $to:large ) {
+		@include font-size(32, 1.23em);
+	}
+
 }
 
 .me {
@@ -38,6 +45,11 @@
 	top: 		50%;
 	left: 	50%;
 	margin: -15px;
+	display: none;
+
+	@include mq( $from:small ) {
+		display: block;
+	}
 
 }
 

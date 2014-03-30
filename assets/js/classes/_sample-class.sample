@@ -13,22 +13,22 @@
  * Within the main.js file we need to implement
  * this class using the following code:
  *
- * if( typeof {{XXX}}ClassName != 'undefined' ) {
+ * if( typeof AMBFrontend != 'undefined' ) {
 	
-       {{XXX}}ClassName.init();
+       AMBFrontend.init();
 	
    }
  *
  *
  */
-var {{XXX}}ClassName = {
+var AMBFrontend = {
 	
 	init : function() {
 		
-		{{XXX}}ClassName.sample_function();
+		AMBFrontend.frontpage_charts();
 		
 	},
-	sample_function : function() {
+	frontpage_charts : function() {
 		
 		
 	}

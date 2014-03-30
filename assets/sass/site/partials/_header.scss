@@ -33,3 +33,12 @@
 .primary-navigation li:first-child a {
 	border-left: 1px solid darken( $bc-dark-grey,10% );
 }
+
+.notification {
+	@include font-size(14);
+	@include bf-head();
+	padding-top: 		$half-spacing-unit;
+	padding-bottom: $half-spacing-unit;
+	background-color: rgb(193,224,245);
+	color: rgb(150,181,201);
+}

@@ -1,0 +1,35 @@
+/**
+ * 
+ * FILE: Class Name
+ * 
+ * AUTHOR: Forepoint (http://www.forepoint.co.uk)
+ * DATE: 2013
+ * VERSION 1.1
+ * 
+ */
+ 
+/**
+ *
+ * Within the main.js file we need to implement
+ * this class using the following code:
+ *
+ * if( typeof {{XXX}}ClassName != 'undefined' ) {
+	
+       {{XXX}}ClassName.init();
+	
+   }
+ *
+ *
+ */
+var AMBFrontend = {
+	
+	init : function() {
+		
+		AMBFrontend.frontpage_charts();
+		
+	},
+	frontpage_charts : function() {
+		
+	}
+		
+};

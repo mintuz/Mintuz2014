@@ -1,0 +1,15 @@
+.site-footer {
+	border-top: 5px solid $bc-blue;
+	background-color: $bc-dark-grey;
+	padding-top: 			$base-spacing-unit;
+	padding-bottom: 	$base-spacing-unit;
+}
+
+.site-footer__content {
+	padding-bottom: $base-spacing-unit;
+}
+
+.site-footer__sign-off {
+	@include font-size(14);
+	text-align:center;
+}

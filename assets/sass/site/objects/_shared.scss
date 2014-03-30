@@ -12,11 +12,9 @@
 	
 	@include container;
 	
-	@include mq( $from: small ) {
-		@include rem((
-			padding: 0 $base-spacing-unit 
-		));
-	}
+	@include rem((
+		padding: 0 $base-spacing-unit 
+	));
 	
 	@include mq( $from: medium ) {
 		@include rem((
