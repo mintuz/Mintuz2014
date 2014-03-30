@@ -14,7 +14,8 @@
 }
 
 .primary-navigation a {
-
+	
+	@include bf-head();
 	@include font-size(16);
 	@include transition(0.5s $default-easing background-color);
 	padding-top: 			$half-spacing-unit;
