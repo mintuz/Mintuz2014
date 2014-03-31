@@ -1,5 +1,6 @@
 .site-header {
 
+	position: relative;
 	background-color: $bc-dark-grey;
 	border-bottom: 1px solid darken( $bc-dark-grey,10% );
 	
@@ -19,6 +20,7 @@
 	@include bf-head();
 	@include font-size(16);
 	@include transition(0.5s $default-easing background-color);
+	line-height: 25px;
 	padding-top: 			$half-spacing-unit;
 	padding-bottom: 	$half-spacing-unit;
 	padding-left: 	$double-spacing-unit;
@@ -27,6 +29,10 @@
 	text-align: center;
 	
 	&:hover {
+		background-color: darken( $bc-blue,20% );
+	}
+
+	&.is-current {
 		background-color: $bc-blue;
 	}
 
@@ -43,4 +49,11 @@
 	padding-bottom: $half-spacing-unit;
 	background-color: rgb(193,224,245);
 	color: rgb(150,181,201);
+}
+
+.site-header__btn {
+	@include font-size(14);
+	position: absolute;
+	top: 5px;
+	right: $base-spacing-unit;
 }

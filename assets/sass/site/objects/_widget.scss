@@ -1,0 +1,26 @@
+.widget {
+	
+	margin-bottom: $base-spacing-unit;
+	padding-bottom: $base-spacing-unit;
+	border-bottom: 1px solid $bc-light-grey;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+}
+
+.widget__title {
+	@include font-size(18);
+	margin-bottom: $half-spacing-unit;
+}
+
+.widget--with-list {
+	
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+}

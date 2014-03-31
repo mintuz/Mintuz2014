@@ -3,17 +3,19 @@
 	background-color: $white;
 	padding: $base-spacing-unit;
 	border: 1px solid darken( $bc-light-grey, 8% );
-	margin-bottom: $double-spacing-unit;
-	
 
 	p {
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
+	
+	@include mq( $to:medium ) {
+		margin-bottom: $base-spacing-unit; 
+	}
 
 	@include mq( $from:medium ) {
-		@include span(9 of 12);
+		@include span(8.5 of 12);
 		@include border-box();
 	}
 
@@ -26,7 +28,7 @@
 	border: 1px solid darken( $bc-light-grey, 8% );
 	
 	@include mq( $from:medium ) {
-		@include span(3 of 12);
+		@include span(3.5 of 12);
 		@include border-box();
 		margin-right: 0;
 	}
@@ -53,6 +55,11 @@
 
 .col {
 	@include border-box();
+	
+	@include mq( $to:medium ) {
+		margin-bottom: $base-spacing-unit;
+	}
+
 }
 
 .col__title {
@@ -136,13 +143,25 @@
 }
 
 .post__title {
-	@include font-size(24);
+
+	@include font-size(24, 1.8rem);
 	margin-bottom: $half-spacing-unit;
 
 	a {
+		@include transition( 0.5s $default-easing all );
 		color: rgb(141, 154, 165);
+
+		&:hover {
+			color: $bc-blue;
+		}
+
 	}
 
+}
+
+.post__timestamp {
+	@include font-size(14);
+	margin-bottom: $half-spacing-unit;
 }
 
 .post__image {
@@ -155,5 +174,33 @@
 	height: 75px;
 	border-radius: 500px;
 	z-index: 999;
+
+}
+
+.site-footer__post-list {
+	
+	padding: 0;
+	border: none;
+
+}
+
+.site-footer__post {
+	
+	padding-left: 0;
+	padding: 				$half-spacing-unit;
+	border-bottom: 	1px solid tint( $bc-dark-grey, 10% );
+	
+	&:after {
+		display: none;
+	}
+	
+	.post__title {
+		@include font-size(18);
+		margin-bottom: $half-spacing-unit / 2;
+	}
+
+	.post__timestamp {
+		margin-bottom: 0;
+	}
 
 }

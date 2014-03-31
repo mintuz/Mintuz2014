@@ -1,15 +1,54 @@
 .site-footer {
-	border-top: 5px solid $bc-blue;
 	background-color: $bc-dark-grey;
-	padding-top: 			$base-spacing-unit;
 	padding-bottom: 	$base-spacing-unit;
 }
 
 .site-footer__content {
+	padding-top: 		$base-spacing-unit;
 	padding-bottom: $base-spacing-unit;
 }
 
 .site-footer__sign-off {
 	@include font-size(14);
 	text-align:center;
+}
+
+.site-footer__col-title {
+	color: $white;
+	margin-bottom: $half-spacing-unit !important;
+}
+
+.site-footer__social-links {
+	@extend %cf;
+	background-color: darken( $bc-dark-grey, 6% );
+}
+
+.site-footer__social-link {
+		
+	@include font-size(24);
+	@include border-box();
+	display: block;
+	float: left;
+	width: 				50px;
+	height: 			50px;
+	background-color: $bc-blue;
+	color: $white;
+	text-align: center;
+
+	.i {
+		line-height: 	50px;
+	}
+
+}
+
+.social-link--github {
+	background-color: darken($bc-blue, 8%);
+}
+
+.social-link--linkedin {
+	background-color: darken($bc-blue, 16%);
+}
+
+.social-link--steam {
+	background-color: darken($bc-blue, 24%);
 }

@@ -1,0 +1,17 @@
+.cta {
+	display: block;
+	padding: $base-spacing-unit;
+}
+
+.cta--hire {
+
+	@include transition(0.5s $default-easing all);
+	background-color: $bc-blue;
+	color: $white;
+	
+	&:hover {
+		color: $white;
+		background-color: darken($bc-blue, 10%);
+	}
+
+}

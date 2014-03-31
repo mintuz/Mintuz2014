@@ -25,29 +25,26 @@
 </head>
 <body>
 	
-	<div class="notification">
-		<div class="wrap">
-			View the source.
-		</div>
-	</div>
-	
 	<header class="site-header">
 		<div class="wrap">
 			<a href="#" class="logo">
 				<img src="" alt="">
 			</a>
-			<nav class="primary-navigation"><ul class="nav">
-				<li><a href="#">Me</a></li>
-				<li><a href="#">Work</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul></nav>
+			<nav class="primary-navigation">
+				<ul class="nav">
+					<li><a href="#">Me</a></li>
+					<li><a href="#" class="is-current">Work</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+			</nav>
+			<a href="#" class="site-header__btn btn btn--fill">Hire me</a>
 		</div>
 	</header>
 
 	<main class="core">
 		<div class="mast">
-			<h1 class="mast__title">Web Developer &amp; iOS Developer from the northwest of England</h1>
-			<div class="me">
+			<h1 class="mast__title animated fadeInDown">Web Developer &amp; iOS Developer from the Northwest of England</h1>
+			<div class="me animated fadeInDown">
 				<div class="wrap">
 					<div class="profile">
 						<img src="assets/img/DSC_3258.jpg" alt="" class="profile__image">
@@ -83,50 +80,67 @@
 
 			<article class="layout layout--alt">
 				<div class="wrap">
-					<div class="col col4 col--content">
-						<h2 class="col__title">Development</h2>
-						<p>I class myself as a full stack web developer, I can build backend and frontend. I have experience using Wordpress, Laravel and Drupal and I specalise in CSS framework development.</p>
-						<p>I also develop iOS applications in my spare time and currently have a iPhone app on the AppStore with another under development.</p>
-					</div>
-					<div class="col col4 col--content">
-						<h2 class="col__title">Academic</h2>
-						<p>I have a first class degree in Computer Network Technology BSc. I was also awarded the British computer society student of the year award.</p>
-						<p>Things I studied at University include Penetration Testing, Network Design, Forensics, Cisco CCNA &amp; Network Protocols.</p>
-					</div>
-					<div class="col col4 col--content">
-						<h2 class="col__title">Interests</h2>
-						<p>My Interests are varied, I play games and I currently play on the PC and PS4. My favourite games include Call Of Duty, Battlefield 4, Guild Wars 2 &amp; Minecraft.</p>
-						<p>I play the Guitar and Bass and whenever I can, I hit some balls on the golf course.</p>
-					</div>
-				</div>
-			</article>
-
-			<article class="layout layout--alt">
-				<div class="wrap">
 					<div class="content">
 						<div class="post-list">
 							<div class="post">
 								<h1 class="post__title"><a href="#">Post Title</a></h1>
+								<p class="post__timestamp"><time>31st March 2014</time></p>
+								<img src="assets/img/DSC_3258.jpg" alt="" class="post__image">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, architecto harum vel veritatis officia perspiciatis sint dignissimos deleniti nihil aspernatur quas autem nulla dolorem doloremque quis eveniet optio. Atque, esse!</p>
+								<a href="#" class="btn">Read more</a>
+							</div>
+							<div class="post">
+								<h1 class="post__title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati!</a></h1>
+								<p class="post__timestamp"><time>1st April 2014</time></p>
 								<img src="assets/img/DSC_3258.jpg" alt="" class="post__image">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, architecto harum vel veritatis officia perspiciatis sint dignissimos deleniti nihil aspernatur quas autem nulla dolorem doloremque quis eveniet optio. Atque, esse!</p>
 								<a href="#" class="btn">Read more</a>
 							</div>
 							<div class="post">
 								<h1 class="post__title"><a href="#">Post Title</a></h1>
-								<img src="assets/img/DSC_3258.jpg" alt="" class="post__image">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, architecto harum vel veritatis officia perspiciatis sint dignissimos deleniti nihil aspernatur quas autem nulla dolorem doloremque quis eveniet optio. Atque, esse!</p>
-								<a href="#" class="btn">Read more</a>
-							</div>
-							<div class="post">
-								<h1 class="post__title"><a href="#">Post Title</a></h1>
+								<p class="post__timestamp"><time>17th March 2014</time></p>
 								<img src="assets/img/DSC_3258.jpg" alt="" class="post__image">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, architecto harum vel veritatis officia perspiciatis sint dignissimos deleniti nihil aspernatur quas autem nulla dolorem doloremque quis eveniet optio. Atque, esse!</p>
 								<a href="#" class="btn">Read more</a>
 							</div>
 						</div>
+						<div class="pagination">
+              <p class="post-nav-title">Page:</p>
+              <a href="?filter-page=1" class="page-numbers is-current">1</a>
+							<a href="?filter-page=2" class="page-numbers ">2</a>
+							<a href="?filter-page=3" class="page-numbers ">3</a>
+							<a href="?filter-page=4" class="page-numbers ">4</a>
+							<a href="?filter-page=5" class="page-numbers ">5</a>
+							<a href="?filter-page=6" class="page-numbers ">6</a>
+							<a href="?filter-page=10" class="page-numbers">10</a>
+						</div>
 					</div>
 					<div class="sidebar">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, incidunt dicta numquam doloribus provident eius suscipit temporibus adipisci? Dignissimos, sunt natus blanditiis fugit laboriosam voluptatibus eius voluptate iusto debitis similique.
+						<div class="widget widget--filter widget--with-list">
+							<h1 class="widget__title">Filter By Category</h1>
+							<ul>
+								<li><a href="#">Opinion</a></li>
+								<li><a href="#">Programming</a></li>
+								<li><a href="#">Security</a></li>
+								<li><a href="#">Gaming</a></li>
+								<li><a href="#">Networking</a></li>
+								<li><a href="#">Personal</a></li>
+							</ul>
+						</div>
+						<div class="widget widget--filter widget--with-list">
+							<h1 class="widget__title">Archive</h1>
+							<ul>
+								<li><a href="#">March 2014</a></li>
+								<li><a href="#">Feburary 2014</a></li>
+								<li><a href="#">January 2014</a></li>
+								<li><a href="#">December 2013</a></li>
+								<li><a href="#">November 2013</a></li>
+								<li><a href="#">October 2013</a></li>
+							</ul>
+						</div>
+						<div class="widget widget--cta">
+							<a href="#" class="cta cta--hire">I am currently <strong>accepting freelance projects</strong> starting June</a>
+						</div>
 					</div>
 				</div>
 			</article>
@@ -136,19 +150,56 @@
 	</main>
 
 	<footer class="site-footer">
+		<div class="site-footer__social-links">
+			<div class="wrap">
+				<a href="" class="site-footer__social-link social-link--twitter"><i class="i i-twitter"></i></a>
+				<a href="" class="site-footer__social-link social-link--github"><i class="i i-github"></i></a>
+				<a href="" class="site-footer__social-link social-link--linkedin"><i class="i i-linkedin"></i></a>
+				<a href="" class="site-footer__social-link social-link--steam"><i class="i i-steam"></i></a>
+			</div>
+		</div>
 		<div class="site-footer__content">
 			<div class="wrap">
 				<div class="col col4 col--content site-footer__col">
-					<h2 class="col__title">Latest Tweet</h2>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint sapiente expedita quasi deleniti nihil velit iste ducimus deserunt odit delectus. Voluptatibus, at hic assumenda ut sapiente distinctio sequi ad aliquid.
+					<h2 class="col__title site-footer__col-title">Latest Tweet</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, perspiciatis, architecto, odit sunt qui cumque quis assumenda temporibus dolorem nesciunt dolores consequatur beatae ullam. Iusto, modi quia dolorem debitis consequatur?</p>
+					<!--<article class="social-feed--twitter tweet" data-twitter-name="mintuz">
+            <header class="tweet__header tweet-header">
+              <p class="tweet-header__twitter-name"><a href="http://twitter.com/mintuz">Adam Bulmer</a></p>
+              <p class="tweet-header__twitter-screenname"><a href="http://twitter.com/mintuz">@mintuz</a></p>
+              <p class="tweet-header__time"><time datetime="20 Days Ago">Posted 20 Days Ago</time></p>
+              <a class="tweet-header__twitter_avatar" href="http://twitter.com/mintuz"><img src="assets/img/DSC_3258.jpg" /></a>
+            </header>
+            <div class="tweet__content">
+              <p class="tweet__text">Far away, in a forest next to a river beneath the mountains, there lived a small purple otter called Philip. Philip likes sausages. The End.</p>
+            </div>
+            <footer class="tweet__footer tweet-footer">
+              <a href="#" class="tweet-footer__action tweet-footer__action--reply"><i class="i i-reply"></i></a>
+              <a href="#" class="tweet-footer__action tweet-footer__action--retweet"><i class="i i-loop"></i></a>
+              <a href="#" class="tweet-footer__action tweet-footer__action--favourite"><i class="i i-star"></i></a>
+            </footer>
+        </article>-->
 				</div>
 				<div class="col col4 col--content site-footer__col">
-					<h2 class="col__title">Recent Rambles</h2>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint sapiente expedita quasi deleniti nihil velit iste ducimus deserunt odit delectus. Voluptatibus, at hic assumenda ut sapiente distinctio sequi ad aliquid.
+					<h2 class="col__title site-footer__col-title">Recent Rambles</h2>
+					<div class="post-list site-footer__post-list">
+						<div class="post site-footer__post">
+							<h1 class="post__title"><a href="#">Post Title</a></h1>
+							<p class="post__timestamp"><time>31st March 2014</time></p>
+						</div>
+						<div class="post site-footer__post">
+							<h1 class="post__title"><a href="#">Post Title</a></h1>
+							<p class="post__timestamp"><time>31st March 2014</time></p>
+						</div>
+						<div class="post site-footer__post">
+							<h1 class="post__title"><a href="#">Post Title</a></h1>
+							<p class="post__timestamp"><time>31st March 2014</time></p>
+						</div>
+					</div>
 				</div>
 				<div class="col col4 col--content site-footer__col">
-					<h2 class="col__title">Connect</h2>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint sapiente expedita quasi deleniti nihil velit iste ducimus deserunt odit delectus. Voluptatibus, at hic assumenda ut sapiente distinctio sequi ad aliquid.
+					<h2 class="col__title site-footer__col-title">Connect</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, dolores molestias eligendi libero accusamus animi officia ex quisquam cum facilis delectus accusantium impedit nemo culpa ipsum perspiciatis numquam! Quo, cupiditate?
 				</div>
 			</div>
 		</div>

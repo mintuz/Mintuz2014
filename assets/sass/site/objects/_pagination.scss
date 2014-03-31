@@ -1,0 +1,26 @@
+.pagination {
+	@extend %cf;
+	@include font-size(14);
+	padding-top: $base-spacing-unit;
+}
+
+.post-nav-title,
+.page-numbers {
+	
+	display: block;
+	float: left;
+	padding: $half-spacing-unit;
+	margin-bottom: 0;
+	margin-right: 1px;
+	background-color: $bc-light-grey;
+
+	&.is-current {
+		background-color: $bc-blue;
+		color: $white;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+}
