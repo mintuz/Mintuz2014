@@ -43,7 +43,7 @@ $text-color: rgb(141, 154, 165);
 /**
  * Base colours
  */
-$link-color: rgb(0,96,165);
+$link-color: $bc-blue;
 $link-color-hover: lighten( $link-color, 20% );
 
 /*------------------------------------*\

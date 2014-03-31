@@ -1,6 +1,7 @@
 .site-header {
 
 	background-color: $bc-dark-grey;
+	border-bottom: 1px solid darken( $bc-dark-grey,10% );
 	
 	&,
 	a {
@@ -20,8 +21,8 @@
 	@include transition(0.5s $default-easing background-color);
 	padding-top: 			$half-spacing-unit;
 	padding-bottom: 	$half-spacing-unit;
-	padding-left: $base-spacing-unit;
-	padding-right: $base-spacing-unit;
+	padding-left: 	$double-spacing-unit;
+	padding-right: 	$double-spacing-unit;
 	border-right: 1px solid darken( $bc-dark-grey,10% );
 	text-align: center;
 	

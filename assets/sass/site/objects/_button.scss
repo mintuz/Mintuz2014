@@ -7,10 +7,18 @@
  * 
  */
 .btn {
-	/* Button styles here */
+	
+	@include transition(0.5s $default-easing all);
+	@include bf-head();
+	@include font-size(14);
+	font-weight: normal;
+	border: 1px solid $bc-blue;
+	color: $bc-blue;
+	padding: $half-spacing-unit;
+
 }
 
-.btn,
 .btn:hover{
-    
+	background-color: $bc-blue;
+	color: $white;    
 }

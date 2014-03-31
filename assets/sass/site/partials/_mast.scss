@@ -40,6 +40,7 @@
 .profile__social-link {
 	
 	@include font-size(32);
+	@include transition(0.5s $default-easing all);
 	color: $white;
 	position: absolute;
 	top: 		50%;
@@ -51,34 +52,48 @@
 		display: block;
 	}
 
+	&:hover {
+		color: darken($bc-blue,20%);
+	}
+
+}
+
+.linkedin {
+	
+	-webkit-transform: rotate(-140deg) translate(130px);
+	
+	.i {
+		-webkit-transform: rotate(140deg);
+	}
+
 }
 
 .github {
 	
-	-webkit-transform: rotate(-130deg) translate(130px);
+	-webkit-transform: rotate(-110deg) translate(130px);
 
 	.i {
-		-webkit-transform: rotate(130deg);
+		-webkit-transform: rotate(110deg);
 	}
 
 }
 
 .twitter {
 	
-	-webkit-transform: rotate(-90deg) translate(130px);
+	-webkit-transform: rotate(-70deg) translate(130px);
 
 	.i {
-		-webkit-transform: rotate(90deg);
+		-webkit-transform: rotate(70deg);
 	}
 
 }
 
 .steam {
 	
-	-webkit-transform: rotate(-50deg) translate(130px);
+	-webkit-transform: rotate(-40deg) translate(130px);
 	
 	.i {
-		-webkit-transform: rotate(50deg);
+		-webkit-transform: rotate(40deg);
 	}
 
 }

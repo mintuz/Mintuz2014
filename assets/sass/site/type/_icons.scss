@@ -35,14 +35,50 @@
 }
 
 
-.i-github:before {
+.i-arrow-left:before {
 	content: '\f100';
 }
-.i-steam:before {
+.i-arrow-right:before {
 	content: '\f101';
 }
-.i-twitter:before {
+.i-github:before {
 	content: '\f102';
+}
+.i-home:before {
+	content: '\f103';
+}
+.i-link:before {
+	content: '\f104';
+}
+.i-linkedin:before {
+	content: '\f105';
+}
+.i-loop:before {
+	content: '\f106';
+}
+.i-menu:before {
+	content: '\f107';
+}
+.i-paypal:before {
+	content: '\f108';
+}
+.i-reddit:before {
+	content: '\f109';
+}
+.i-search:before {
+	content: '\f10a';
+}
+.i-star:before {
+	content: '\f10b';
+}
+.i-steam:before {
+	content: '\f10c';
+}
+.i-twitter:before {
+	content: '\f10d';
+}
+.i-wordpress:before {
+	content: '\f10e';
 }
 
 @if $old-ie {
