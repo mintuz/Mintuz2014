@@ -39,3 +39,11 @@
     }
     
 }
+
+@mixin vertical-font-size( $font-size, $top:0, $bottom:0 ) {
+    
+    @include adjust-font-size-to($font-size);
+    margin-top: rhythm( $top, $font-size );
+    margin-bottom: rhythm( $bottom, $font-size ); 
+
+}

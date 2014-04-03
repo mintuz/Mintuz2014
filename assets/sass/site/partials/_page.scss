@@ -21,6 +21,11 @@
 
 }
 
+.page-title {
+	@include trailing-border(1px, 0.5, 36px);
+	border-color: darken( $bc-light-grey, 8% );
+}
+
 .sidebar {
 	
 	background-color: $white;
@@ -47,8 +52,8 @@
 }
 
 .layout__title {
-	@include font-size(28);
-	margin-bottom: $half-spacing-unit;
+	@include vertical-font-size(28px);
+	//margin-bottom: $half-spacing-unit;
 	position: relative;
 	padding-right: $base-spacing-unit;
 }
@@ -60,11 +65,15 @@
 		margin-bottom: $base-spacing-unit;
 	}
 
+	p:last-child {
+		margin-bottom: 0;
+	}
+
 }
 
 .col__title {
-	@include font-size(24);
-	margin-bottom: 6px;
+	@include vertical-font-size(24px);
+	//margin-bottom: 6px;
 }
 
 @include mq( $from:medium ) {
@@ -144,8 +153,8 @@
 
 .post__title {
 
-	@include font-size(24, 1.8rem);
-	margin-bottom: $half-spacing-unit;
+	@include vertical-font-size(24px);
+	line-height: 1.3em;
 
 	a {
 		@include transition( 0.5s $default-easing all );
@@ -160,8 +169,7 @@
 }
 
 .post__timestamp {
-	@include font-size(14);
-	margin-bottom: $half-spacing-unit;
+	@include vertical-font-size(14px, 0.3, 0.7);
 }
 
 .post__image {
@@ -195,8 +203,8 @@
 	}
 	
 	.post__title {
-		@include font-size(18);
-		margin-bottom: $half-spacing-unit / 2;
+		@include vertical-font-size(18px);
+		//margin-bottom: $half-spacing-unit / 2;
 	}
 
 	.post__timestamp {

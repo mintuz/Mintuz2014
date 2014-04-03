@@ -11,8 +11,7 @@
 }
 
 .widget__title {
-	@include font-size(18);
-	margin-bottom: $half-spacing-unit;
+	@include vertical-font-size( 18px, 0, 0.5 );
 }
 
 .widget--with-list {

@@ -13,7 +13,7 @@
 	padding-top: 60px;
 		
 	@include mq( $to:large ) {
-		@include font-size(32, 1.23em);
+		@include vertical-font-size(32px);
 	}
 
 }

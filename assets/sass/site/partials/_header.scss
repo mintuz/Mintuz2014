@@ -1,5 +1,5 @@
 .site-header {
-
+	
 	position: relative;
 	background-color: $bc-dark-grey;
 	border-bottom: 1px solid darken( $bc-dark-grey,10% );
@@ -12,34 +12,31 @@
 }
 
 .primary-navigation {
-	font-size: 0;
-}
-
-.primary-navigation a {
 	
-	@include bf-head();
-	@include font-size(16);
-	@include transition(0.5s $default-easing background-color);
-	line-height: 25px;
-	padding-top: 			$half-spacing-unit;
-	padding-bottom: 	$half-spacing-unit;
-	padding-left: 	$double-spacing-unit;
-	padding-right: 	$double-spacing-unit;
-	border-right: 1px solid darken( $bc-dark-grey,10% );
-	text-align: center;
+	@extend %cf;
 	
-	&:hover {
-		background-color: darken( $bc-blue,20% );
+	li {
+		display: block !important;
+		float: left;
 	}
 
-	&.is-current {
-		background-color: $bc-blue;
+	a {
+	
+		@include bf-head();
+		@include font-size(16);
+		@include transition(0.5s $default-easing color);
+		display: block;
+		padding-top: 			$base-spacing-unit;
+		padding-bottom: 	$base-spacing-unit;
+		padding-right: 		$double-spacing-unit;
+		
+		&:hover,
+		&.is-current {
+			color: $bc-blue;
+		}
+
 	}
 
-}
-
-.primary-navigation li:first-child a {
-	border-left: 1px solid darken( $bc-dark-grey,10% );
 }
 
 .notification {
@@ -54,6 +51,6 @@
 .site-header__btn {
 	@include font-size(14);
 	position: absolute;
-	top: 5px;
-	right: $base-spacing-unit;
+	top: 		$half-spacing-unit;
+	right: 	$base-spacing-unit;
 }
