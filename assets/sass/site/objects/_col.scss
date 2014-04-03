@@ -1,0 +1,59 @@
+.col {
+	@include border-box();
+	
+	@include mq( $to:medium ) {
+		margin-bottom: $base-spacing-unit;
+	}
+
+}
+
+.col__title {
+	@include vertical-font-size(24px);
+}
+
+@include mq( $from:medium ) {
+
+	.col2 {
+		
+		@include span(6 of 12);
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+
+	.col3 {
+		
+		@include span(3 of 12);
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+	.col--content {
+		
+		&:first-child {
+			padding-right: $base-spacing-unit;
+		}
+
+		&:last-child {
+			padding-left: $base-spacing-unit;
+		}
+
+	}
+
+	.col4 {
+		
+		@include span(4 of 12);
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+}

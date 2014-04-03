@@ -1,0 +1,42 @@
+.layout {
+	@extend %cf;
+	overflow: hidden;
+	padding-top: $base-spacing-unit;
+	padding-bottom: $base-spacing-unit;
+}
+
+.layout--alt {
+	background-color: $bc-light-grey;
+
+	.layout__header {
+		background-color: darken( $bc-light-grey, 8% );
+		color: $white;
+	}
+
+	.layout__title {
+		color: $text-color;
+	}
+
+}
+
+.layout--dark {
+	background-color: $bc-dark-grey;
+	color: $bc-light-grey;
+
+	.layout__header {
+		background-color: darken( $bc-dark-grey, 8% );
+		color: $white;
+	}
+
+}
+
+.layout--no-padding {
+	padding-top: 		0;
+	padding-bottom: 0;
+}
+
+.layout__title {
+	@include vertical-font-size(28px);
+	position: relative;
+	padding-right: $base-spacing-unit;
+}

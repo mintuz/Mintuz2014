@@ -15,7 +15,6 @@
 
 .site-footer__col-title {
 	color: $white;
-	//margin-bottom: $half-spacing-unit !important;
 }
 
 .site-footer__social-links {
@@ -51,4 +50,31 @@
 
 .social-link--steam {
 	background-color: darken($bc-blue, 24%);
+}
+
+.site-footer__post-list {
+	
+	padding: 0;
+	border: none;
+
+}
+
+.site-footer__post {
+	
+	padding-left: 0;
+	padding: 				$half-spacing-unit;
+	border-bottom: 	1px solid tint( $bc-dark-grey, 10% );
+	
+	&:after {
+		display: none;
+	}
+	
+	.post__title {
+		@include vertical-font-size(18px);
+	}
+
+	.post__timestamp {
+		margin-bottom: 0;
+	}
+
 }
