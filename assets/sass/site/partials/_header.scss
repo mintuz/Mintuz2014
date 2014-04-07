@@ -9,6 +9,11 @@
 		color: $white;
 	}
 
+	@include mq( $to:medium ) {
+		padding-top: 		$base-spacing-unit;
+		padding-bottom: $base-spacing-unit;
+	}
+
 }
 
 .primary-navigation {
@@ -17,7 +22,11 @@
 	
 	li {
 		display: block !important;
-		float: left;
+		
+		@include mq( $from:medium ) {
+			float: left;			
+		}
+
 	}
 
 	a {
@@ -26,13 +35,23 @@
 		@include font-size(16);
 		@include transition(0.5s $default-easing color);
 		display: block;
-		padding-top: 			$base-spacing-unit;
-		padding-bottom: 	$base-spacing-unit;
+		padding-top: 			$half-spacing-unit;
+		padding-bottom: 	$half-spacing-unit;
 		padding-right: 		$double-spacing-unit;
 		
 		&:hover,
 		&.is-current {
 			color: $bc-blue;
+		}
+
+		.i {
+			@include font-size(20);
+			margin-right: 8px;
+		}
+
+		@include mq( $from:medium ) {
+			padding-top: 			$base-spacing-unit;
+			padding-bottom: 	$base-spacing-unit;
 		}
 
 	}
@@ -50,7 +69,16 @@
 
 .site-header__btn {
 	@include font-size(14);
-	position: absolute;
-	top: 		$half-spacing-unit;
-	right: 	$base-spacing-unit;
+
+	@include mq( $from:medium ) {
+		position: absolute;
+		top: 		$half-spacing-unit;
+		right: 	$base-spacing-unit;
+	}
+
+	@include mq( $to:medium ) {
+		display: block;
+		margin-top: $half-spacing-unit;
+	}
+
 }

@@ -8,7 +8,10 @@
 }
 
 .col__title {
-	@include vertical-font-size(24px);
+	
+	@include vertical-font-size(24px, 0, 0.5);
+	border-bottom: 1px solid $body-color;
+
 }
 
 @include mq( $from:medium ) {

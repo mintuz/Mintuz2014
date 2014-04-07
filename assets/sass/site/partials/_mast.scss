@@ -10,10 +10,21 @@
 
 .mast__title {
 	color: $white;
-	padding-top: 60px;
+	padding-top: 50px;
 		
 	@include mq( $to:large ) {
 		@include vertical-font-size(32px);
+		line-height: 1.5em;	
+	}
+
+	@include mq( $to:medium ) {
+		@include vertical-font-size(28px);
+		line-height: 1.5em;
+	}
+
+	@include mq( $to:small ) {
+		@include vertical-font-size(24px);
+		line-height: 1.5em;
 	}
 
 }

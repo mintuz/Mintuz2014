@@ -1,0 +1,17 @@
+.tags {
+	@extend %cf;
+}
+
+.tag {
+	
+	float: left;
+	background-color: tint($bc-blue, 70%);
+	padding-top: 		5px;
+	padding-bottom: 5px;
+	padding-left: 	$half-spacing-unit;
+	padding-right:  $half-spacing-unit;
+	margin-right: 	5px;
+	margin-bottom: 	5px;
+	color: $bc-blue;
+
+}

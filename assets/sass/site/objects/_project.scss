@@ -1,11 +1,14 @@
+.projects {
+	margin-left: 	-$base-spacing-unit;
+	margin-right: -$base-spacing-unit;
+}
+
 .project {
 	
 	@include border-box();
 	@include transition(0.5s $default-easing all);
 	display: block;
-	width: 33.333%;
 	padding: $base-spacing-unit;
-	float: left;
 	background-color: $bc-blue;
 	
 	&,
@@ -44,11 +47,17 @@
 
 	}
 
+	@include mq( $from:medium ) {
+		width: 33.333%;
+		float: left;
+	}
+
 }
 
 .project__inner {
 	display: table;
 	min-height: 220px;
+	width: 100%;
 }
 
 .project__content {

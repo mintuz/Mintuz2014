@@ -40,3 +40,14 @@
 	position: relative;
 	padding-right: $base-spacing-unit;
 }
+
+.layout--skill-chart {
+	
+	display: none;
+	padding-bottom: 0;
+
+	@include mq( $from:medium ) {
+		display: block;
+	}
+
+}
