@@ -51,57 +51,12 @@ $link-color-hover: lighten( $link-color, 20% );
 \*------------------------------------*/
 
 /**
- * Form styling
- */
-$input-bg: $white;
-$input-bg-disabled: $gray-lighter;
-
-$input-border: $gray;
-
-$input-placeholder-color: $gray-light;
-
-$legend-border-color: $gray-dark;
-
-$input-group-addon-border-color: $input-border;
-
-
-/**
  * Form state styling
  */
-$state-warning-text: rgb(205,153,83);
-$state-warning-bg: rgb(253,248,228);
-$state-warning-border: darken( $state-warning-bg, 3% );
-
-$state-danger-text: rgb(211,74,74);
-$state-danger-bg: rgb(249,223,223);
-$state-danger-border: darken( $state-danger-bg, 3% );
-
-$state-success-text: rgb(0,136,67);
-$state-success-bg: rgb(217,240,217);
-$state-success-border: darken( $state-success-bg, 5% );
-
-$state-info-text: rgb(0,137,174);
-$state-info-bg: rgb(210,238,247);
-$state-info-border: darken( $state-info-bg, 7% );
-
-
-/**
- * Form sizing
- */
-$padding-base-vertical:    8px;
-$padding-base-horizontal:  12px;
-
-$padding-large-vertical:   14px;
-$padding-large-horizontal: 16px;
-
-$padding-small-vertical:   5px;
-$padding-small-horizontal: 10px;
-
-$input-height-base:  ( $base-line-height + ( $padding-base-vertical * 2 ) + 2 );
-
-$border-radius-base: 4px;
-$border-radius-large: 6px;
-$border-radius-small: 3px;
+$error-color: 	rgb(242,222,222);
+$warning-color: rgb(252,248,227);
+$info-color: 		rgb(217,237,247);
+$success-color: rgb(223,240,216);
 
 /*------------------------------------*\
 	$FONTS

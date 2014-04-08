@@ -26,6 +26,7 @@
 }
 
 .page-title {
+
 	@include trailing-border(1px, 0.5, 36px);
 	border-color: darken( $bc-light-grey, 8% );
 }

@@ -11,6 +11,7 @@
 	@include transition(0.5s $default-easing all);
 	@include bf-head();
 	@include font-size(14);
+	background-color: transparent;
 	font-weight: normal;
 	border: 1px solid $bc-blue;
 	color: $bc-blue;

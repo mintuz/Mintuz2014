@@ -34,34 +34,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { 
-	@include adjust-font-size-to(36px); 
-	margin: 0 0 rhythm(1, 36px) 0; // 1 line below
+	
+	@include adjust-font-size-to(28px); 
+	@include adjust-leading-to(1);
+	margin: 0 0 rhythm(0.5, 28px) 0; // 1 line below
+
+	@include mq( $from:medium ) {
+		@include adjust-font-size-to(36px); 
+		margin: 0 0 rhythm(1, 36px) 0; // 1 line below
+	}
+
 } 
 
 h2 { 
-	@include adjust-font-size-to(28px); 
+	
+	@include adjust-font-size-to(24px); 
 	@include adjust-leading-to(1);
-	margin: rhythm(1.2, 28px) 0 rhythm(0.3, 28px) 0; // 2 lines above 1 line below
+	margin: rhythm(1, 24px) 0 rhythm(0.1, 24px) 0; // 2 lines above 1 line below
+
+	@include mq( $from:medium ) {
+		@include adjust-font-size-to(28px); 
+		@include adjust-leading-to(1);
+		margin: rhythm(1.2, 28px) 0 rhythm(0.3, 28px) 0; // 2 lines above 1 line below
+	}
 
 }
 
 h3 { 
-	@include adjust-font-size-to(24px); 
-	margin: rhythm(1.2, 24px) 0 rhythm(0.3, 24px) 0; // 2 lines above 1 line below
+	
+	@include adjust-font-size-to(18px);
+	@include adjust-leading-to(1);
+	margin: rhythm(1.2, 18px) 0 rhythm(0.1, 18px) 0; // 2 lines above 1 line below
+
+	@include mq( $from:medium ) {
+		@include adjust-font-size-to(24px);
+		@include adjust-leading-to(1);
+		margin: rhythm(1.2, 24px) 0 rhythm(0.3, 24px) 0; // 2 lines above 1 line below
+	}
+
 } 
 
 h4 { 
-	@include adjust-font-size-to(18px); 
+	@include adjust-font-size-to(18px);
+	@include adjust-leading-to(1);
 	margin: rhythm(1.2, 18px) 0 rhythm(0.3, 18px) 0; // 2 lines above 1 line below
 }
 
 h5 { 
-	@include adjust-font-size-to(16px); 
+	@include adjust-font-size-to(16px);
+	@include adjust-leading-to(1);
 	margin: rhythm(1.2, 16px) 0 rhythm(0.3, 16px) 0; // 2 lines above 1 line below
 }
 
 h6 { 
-	@include adjust-font-size-to(16px); 
+	@include adjust-font-size-to(16px);
+	@include adjust-leading-to(1);
 	margin: rhythm(1.2, 16px) 0 rhythm(0.3, 16px) 0; // 2 lines above 1 line below
 }
 

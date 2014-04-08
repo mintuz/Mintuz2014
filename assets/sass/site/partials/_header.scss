@@ -73,7 +73,7 @@
 	@include mq( $from:medium ) {
 		position: absolute;
 		top: 		$half-spacing-unit;
-		right: 	$base-spacing-unit;
+		right: 	34px;
 	}
 
 	@include mq( $to:medium ) {

@@ -5,6 +5,10 @@
 
 .post {
 	position: relative;
+}
+
+.post-list__post {
+	
 	padding-top: 		$base-spacing-unit;
 	padding-bottom: $base-spacing-unit;
 	border-bottom: 1px solid $bc-light-grey;
@@ -57,5 +61,22 @@
 	height: 75px;
 	border-radius: 500px;
 	z-index: 999;
+
+}
+
+.post__meta {
+	
+	margin-top: 		-$half-spacing-unit;
+	margin-bottom: 	$base-spacing-unit;
+
+	.post__cats,
+	.post__timestamp {
+		display: inline-block;
+	}
+
+	.post__timestamp {
+		margin-right: $half-spacing-unit;
+		margin-bottom: 0;
+	}
 
 }
