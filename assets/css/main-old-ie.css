@@ -18,9 +18,9 @@
  * 
  * FILE: Main CSS
  * 
- * AUTHOR: Forepoint (http://www.forepoint.co.uk)
+ * AUTHOR: Adam Bulmer (http://mintuz.com)
  * DATE: 2013
- * VERSION 2.2
+ * VERSION 1
  * 
  */
 /*------------------------------------*\
@@ -2838,13 +2838,22 @@ img.alignright {
   color: white;
 }
 
-/* line 33, ../sass/site/objects/_layout.scss */
+/* line 35, ../sass/site/objects/_layout.scss */
+.layout--detailed-projects:nth-of-type(1) {
+  background-color: #474f55;
+}
+/* line 39, ../sass/site/objects/_layout.scss */
+.layout--detailed-projects:nth-of-type(2) {
+  background-color: #575e64;
+}
+
+/* line 45, ../sass/site/objects/_layout.scss */
 .layout--no-padding {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 38, ../sass/site/objects/_layout.scss */
+/* line 50, ../sass/site/objects/_layout.scss */
 .layout__title {
   font-size: 1.75em;
   line-height: 1.71429em;
@@ -2854,7 +2863,7 @@ img.alignright {
   padding-right: 24px;
 }
 
-/* line 44, ../sass/site/objects/_layout.scss */
+/* line 56, ../sass/site/objects/_layout.scss */
 .layout--skill-chart {
   display: none;
   padding-bottom: 0;
@@ -2983,12 +2992,6 @@ img.alignright {
 }
 
 /* line 1, ../sass/site/objects/_project.scss */
-.projects {
-  margin-left: -24px;
-  margin-right: -24px;
-}
-
-/* line 6, ../sass/site/objects/_project.scss */
 .project {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3004,46 +3007,58 @@ img.alignright {
   width: 33.333%;
   float: left;
 }
-/* line 14, ../sass/site/objects/_project.scss */
+/* line 9, ../sass/site/objects/_project.scss */
 .project, .project:hover {
   color: #edeff0;
 }
-/* line 19, ../sass/site/objects/_project.scss */
+/* line 14, ../sass/site/objects/_project.scss */
 .project p {
   margin-bottom: 0;
 }
-/* line 23, ../sass/site/objects/_project.scss */
+/* line 18, ../sass/site/objects/_project.scss */
 .project:nth-of-type(1) {
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 26, ../sass/site/objects/_project.scss */
+/* line 21, ../sass/site/objects/_project.scss */
 .project:nth-of-type(1):hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 32, ../sass/site/objects/_project.scss */
+/* line 27, ../sass/site/objects/_project.scss */
 .project:nth-of-type(2) {
   background-color: rgba(0, 0, 0, 0.3);
 }
-/* line 35, ../sass/site/objects/_project.scss */
+/* line 30, ../sass/site/objects/_project.scss */
 .project:nth-of-type(2):hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 41, ../sass/site/objects/_project.scss */
+/* line 36, ../sass/site/objects/_project.scss */
 .project:nth-of-type(3) {
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 44, ../sass/site/objects/_project.scss */
+/* line 39, ../sass/site/objects/_project.scss */
 .project:nth-of-type(3):hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 57, ../sass/site/objects/_project.scss */
+/* line 61, ../sass/site/objects/_project.scss */
+.project--two-thirds {
+  width: 66.666%;
+  float: left;
+}
+
+/* line 70, ../sass/site/objects/_project.scss */
+.project--full {
+  width: 100%;
+  float: left;
+}
+
+/* line 79, ../sass/site/objects/_project.scss */
 .project--detailed {
   position: relative;
   background-size: cover;
   background-color: transparent;
 }
-/* line 62, ../sass/site/objects/_project.scss */
+/* line 84, ../sass/site/objects/_project.scss */
 .project--detailed:after {
   -moz-transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) all;
   -o-transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) all;
@@ -3058,7 +3073,7 @@ img.alignright {
   background-color: rgba(0, 0, 0, 0.8);
   content: " ";
 }
-/* line 74, ../sass/site/objects/_project.scss */
+/* line 96, ../sass/site/objects/_project.scss */
 .project--detailed .project__inner {
   -moz-transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) all;
   -o-transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) all;
@@ -3068,60 +3083,60 @@ img.alignright {
   z-index: 999;
   opacity: 0;
 }
-/* line 80, ../sass/site/objects/_project.scss */
+/* line 102, ../sass/site/objects/_project.scss */
 .project--detailed .project__inner:hover {
   opacity: 1;
 }
-/* line 88, ../sass/site/objects/_project.scss */
+/* line 110, ../sass/site/objects/_project.scss */
 .project--detailed:hover:after {
   opacity: 1;
 }
 
-/* line 95, ../sass/site/objects/_project.scss */
+/* line 117, ../sass/site/objects/_project.scss */
 .project--moto {
   background-image: url(../img/moto.png);
 }
 
-/* line 99, ../sass/site/objects/_project.scss */
+/* line 121, ../sass/site/objects/_project.scss */
 .project--s4b {
   background-image: url(../img/s4b.png);
 }
 
-/* line 103, ../sass/site/objects/_project.scss */
+/* line 125, ../sass/site/objects/_project.scss */
 .project--der {
   background-image: url(../img/der.png);
 }
 
-/* line 107, ../sass/site/objects/_project.scss */
+/* line 129, ../sass/site/objects/_project.scss */
 .project--faceconnect {
   background-image: url(../img/face.png);
 }
 
-/* line 111, ../sass/site/objects/_project.scss */
+/* line 133, ../sass/site/objects/_project.scss */
 .project--wp-post {
   background-image: url(../img/wp-post.png);
 }
 
-/* line 115, ../sass/site/objects/_project.scss */
+/* line 137, ../sass/site/objects/_project.scss */
 .project--sarah {
   background-image: url(../img/sarah.png);
 }
 
-/* line 119, ../sass/site/objects/_project.scss */
+/* line 141, ../sass/site/objects/_project.scss */
 .project__inner {
   display: table;
   min-height: 220px;
   width: 100%;
 }
 
-/* line 125, ../sass/site/objects/_project.scss */
+/* line 147, ../sass/site/objects/_project.scss */
 .project__content {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 131, ../sass/site/objects/_project.scss */
+/* line 153, ../sass/site/objects/_project.scss */
 .project__title {
   font-size: 1.5em;
   line-height: 2em;
@@ -3405,7 +3420,7 @@ img.alignright {
 .me {
   z-index: 999;
   position: absolute;
-  bottom: -80px;
+  bottom: -90px;
   left: 0;
   right: 0;
 }
@@ -3415,7 +3430,7 @@ img.alignright {
   width: 150px;
   height: 150px;
   border-radius: 1000px;
-  border: 12px solid #3e9d97;
+  border: 12px solid white;
 }
 
 /* line 47, ../sass/site/partials/_mast.scss */

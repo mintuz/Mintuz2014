@@ -32,7 +32,7 @@
 .me {
 	z-index: 999;
 	position: absolute;
-	bottom: -80px;
+	bottom: -90px;
 	left: 	0;
 	right: 	0;
 }
@@ -41,7 +41,7 @@
 	width: 		150px;
 	height: 	150px;
 	border-radius: 1000px;
-	border: $half-spacing-unit solid darken($bc-blue,10%);
+	border: $half-spacing-unit solid $white;
 }
 
 .profile {
