@@ -54,6 +54,68 @@
 
 }
 
+.project--detailed {
+	position: relative;
+	background-size: cover;
+	background-color: transparent;
+
+	&:after {
+		@include transition(0.5s $default-easing all);
+		opacity: 0;
+		position: absolute;
+		top: 		0;
+		left: 	0;
+		right: 	0;
+		bottom: 0;
+		background-color: rgba($black, 0.8);
+		content: " ";
+	}
+
+	.project__inner {
+		@include transition(0.5s $default-easing all);
+		position: relative;
+		z-index: 999;
+		opacity: 0;
+		
+		&:hover {
+			opacity: 1;
+		}
+
+	}
+	
+	&:hover {
+
+		&:after {
+			opacity: 1;
+		}
+	}
+
+}
+
+.project--moto {
+	background-image: url(../img/moto.png);
+}
+
+.project--s4b {
+	background-image: url(../img/s4b.png);
+}
+
+.project--der {
+	background-image: url(../img/der.png);
+}
+
+.project--faceconnect {
+	background-image: url(../img/face.png);
+}
+
+.project--wp-post {
+	background-image: url(../img/wp-post.png);
+}
+
+.project--sarah {
+	background-image: url(../img/sarah.png);
+}
+
 .project__inner {
 	display: table;
 	min-height: 220px;
